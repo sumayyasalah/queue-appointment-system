@@ -1,0 +1,149 @@
+.book-appointment {
+  background: white;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.book-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.book-header h2 {
+  color: #333;
+  font-size: 28px;
+}
+
+.book-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
+.book-form {
+  background: #f9f9f9;
+  padding: 25px;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+}
+
+.book-form .form-group {
+  margin-bottom: 20px;
+}
+
+.book-form label {
+  display: block;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.book-form input,
+.book-form select,
+.book-form textarea {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.book-form input:focus,
+.book-form select:focus,
+.book-form textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  background: white;
+}
+
+.book-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.book-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.4);
+}
+
+.suggested-slots {
+  background: #f0f7ff;
+  padding: 25px;
+  border-radius: 10px;
+  border-left: 4px solid #2196f3;
+}
+
+.suggested-slots h3 {
+  color: #1565c0;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.slot-btn {
+  padding: 12px;
+  background: white;
+  border: 2px solid #2196f3;
+  border-radius: 8px;
+  color: #1565c0;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 13px;
+}
+
+.slot-btn:hover {
+  background: #2196f3;
+  color: white;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+  .book-content {
+    grid-template-columns: 1fr;
+  }
+
+  .slots-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .book-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .slots-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
